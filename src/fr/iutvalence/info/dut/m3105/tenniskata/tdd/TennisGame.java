@@ -3,8 +3,7 @@ public class TennisGame
 {
 
 	public Object getScore() {
-		// TODO Auto-generated method stub
-		return null;
+		return "love-all";
 	}
 
 }
