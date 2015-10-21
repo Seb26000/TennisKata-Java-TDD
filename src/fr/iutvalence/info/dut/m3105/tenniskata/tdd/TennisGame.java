@@ -18,4 +18,8 @@ public class TennisGame
 		score = "Fifteen-love";
 	}
 
+	public void receiverHasScored() {
+		score = "Love-fifteen";
+	}
+
 }
