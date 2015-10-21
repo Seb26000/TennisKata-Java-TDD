@@ -2,24 +2,34 @@ package fr.iutvalence.info.dut.m3105.tenniskata.tdd;
 public class TennisGame
 {
 
-	private String score;
+	private String writtenScore; 
+	private int serverNumberOfScoredPoints;
+	private int receiverNumberOfScoredPoints;
 	
 	public TennisGame(){
-		score = "Love-all";
+		this.writtenScore = "Love-all";
+		this.serverNumberOfScoredPoints = 0;
+		this.receiverNumberOfScoredPoints = 0;
 	}
 	
 	public String getScore() 
 	{
-		return score;
+		this.updateWrittenScore();
+		return writtenScore;
 	}
 
 	public void serverHasScored() 
-	{
-		score = "Fifteen-love";
+	{ 
+		serverNumberOfScoredPoints++;
 	}
 
 	public void receiverHasScored() {
-		score = "Love-fifteen";
+		receiverNumberOfScoredPoints++;
+	}
+	
+	public void updateWrittenScore()
+	{
+
 	}
 
 }
