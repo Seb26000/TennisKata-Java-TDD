@@ -15,10 +15,17 @@ public class TennisGameTest
 		assertEquals("Love-all", tennisGame.getScore());
 	}
 	@Test
-	public void CreationOfANewTennisGameWithFifteenLove()
+	public void CreationOfANewTennisGameAndTheServerScoreExpectedFifteenLove()
 	{
 		TennisGame tennisGame = new TennisGame();
 		tennisGame.serverHasScored();
 		assertEquals("Fifteen-love", tennisGame.getScore());
+	}
+	@Test
+	public void CreationOfANewTennisGameAndTheServerScoreExpectedLoveFifteen()
+	{
+		TennisGame tennisGame = new TennisGame();
+		tennisGame.receiverHasScored();
+		assertEquals("Love-fifteen", tennisGame.getScore());
 	}
 }
