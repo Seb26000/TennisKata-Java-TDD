@@ -12,7 +12,13 @@ public class TennisGameTest
 	public void CreationOfANewTennisGameWithLoveAll()
 	{
 		TennisGame tennisGame = new TennisGame();
-		assertEquals("love-all", tennisGame.getScore());
+		assertEquals("Love-all", tennisGame.getScore());
 	}
-
+	@Test
+	public void CreationOfANewTennisGameWithFifteenLove()
+	{
+		TennisGame tennisGame = new TennisGame();
+		tennisGame.serverHasScored();
+		assertEquals("Fifteen-love", tennisGame.getScore());
+	}
 }
