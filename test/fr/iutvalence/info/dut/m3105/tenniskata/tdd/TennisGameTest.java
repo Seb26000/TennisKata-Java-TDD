@@ -28,4 +28,12 @@ public class TennisGameTest
 		tennisGame.receiverHasScored();
 		assertEquals("Love-fifteen", tennisGame.getScore());
 	}
+	@Test
+	public void CreationOfANewTennisGameAndAllThePlayersScoreExpectedFifteenAll()
+	{
+		TennisGame tennisGame = new TennisGame();
+		tennisGame.serverHasScored();
+		tennisGame.receiverHasScored();
+		assertEquals("Fifteen-all", tennisGame.getScore());
+	}
 }
